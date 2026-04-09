@@ -111,7 +111,7 @@ section { padding: 100px 10%; }
 .btn-ghost { padding: 15px 30px; border: 1px solid var(--glass-border); border-radius: 50px; color: #fff; text-decoration: none; display: flex; align-items: center; gap: 10px; }
 
 /* --- GLASS CARDS --- */
-.glass { background: var(--glass-bg); border: 1px solid var(--glass-border); backdrop-filter: blur(15px); border-radius: 20px; padding: 40px; transition: 0.4s; }
+.glass { background: var(--glass-bg); border: 1px solid var(--glass-border); backdrop-filter: blur(15px); border-radius: 20px; padding: 40px; transition: 0.4s; margin-bottom: 40px; }
 .glass:hover { transform: translateY(-5px); border-color: rgba(255, 45, 149, 0.4); }
 
 /* --- BENTO GRID --- */
@@ -188,7 +188,6 @@ footer { text-align: center; padding: 50px; opacity: 0.4; font-size: 0.7rem; let
     * { cursor: auto !important; }
     #bubble-cursor { display: none; }
 
-    /* Hide menu by default on mobile */
     .nav-cards {
         display: none; 
         position: fixed;
@@ -202,28 +201,11 @@ footer { text-align: center; padding: 50px; opacity: 0.4; font-size: 0.7rem; let
         z-index: 999;
     }
 
-    /* Active state shows menu */
     .nav-cards.active { display: flex; }
     .nav-cards a { font-size: 1.4rem; width: 80%; text-align: center; font-family: 'Orbitron'; }
 
-    /* Hamburger bars */
-    .menu-toggle {
-        display: flex;
-        flex-direction: column;
-        gap: 6px;
-        z-index: 1001;
-        cursor: pointer;
-    }
-
-    .bar {
-        width: 30px;
-        height: 3px;
-        background-color: var(--neon-pink);
-        border-radius: 10px;
-        transition: 0.3s;
-    }
-
-    /* Animation for the 'X' close state */
+    .menu-toggle { display: flex; flex-direction: column; gap: 6px; z-index: 1001; cursor: pointer; }
+    .bar { width: 30px; height: 3px; background-color: var(--neon-pink); border-radius: 10px; transition: 0.3s; }
     .menu-toggle.is-active .bar:nth-child(2) { opacity: 0; }
     .menu-toggle.is-active .bar:nth-child(1) { transform: translateY(9px) rotate(45deg); }
     .menu-toggle.is-active .bar:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
